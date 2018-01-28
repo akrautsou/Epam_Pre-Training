@@ -1,9 +1,10 @@
 class Fifth {
-    static void start() {
+    void start() {
         Integer numbers = 45678;
         String txt = Integer.toString(numbers);
         char[] array = txt.toCharArray();
-        int sum = 0,proizv = 1;
+        int sum = 0;
+        int proizv = 1;
         for (char c : array) {
             sum = sum + Character.getNumericValue(c);
             proizv = proizv * Character.getNumericValue(c);

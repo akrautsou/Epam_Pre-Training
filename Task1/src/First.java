@@ -1,22 +1,20 @@
 import java.util.Scanner;
 
 class First {
-    static void start() {
-        int choice;
+    void start() {
         Scanner scanner = new Scanner(System.in);
-        Double weight;
         System.out.println("Enter the weight of dino");
-        weight = scanner.nextDouble();
+        Double weight = scanner.nextDouble();
         System.out.println("Do you wanna see kg or tons");
         System.out.println("1 - kg");
         System.out.println("2 - tons");
-        choice = scanner.nextInt();
+        int choice = scanner.nextInt();
         switch (choice) {
             case 1:
-                System.out.println(intokg(weight));
+                System.out.println(intoKg(weight));
                 break;
             case 2:
-                System.out.println(intoton(weight));
+                System.out.println(intoTon(weight));
                 break;
             default:
                 System.err.println("Error");
@@ -25,15 +23,11 @@ class First {
         }
     }
 
-    private static Double intokg(Double weight) {
-        Double weightkg;
-        weightkg = weight / 1000;
-        return weightkg;
+    private Double intoKg(Double weight) {
+        return weight / 1000;
     }
 
-    private static Double intoton(Double weight) {
-        Double weightton;
-        weightton = weight / 1000000;
-        return weightton;
+    private Double intoTon(Double weight) {
+        return weight / 1000000;
     }
 }

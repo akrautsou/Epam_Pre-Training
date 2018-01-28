@@ -1,6 +1,6 @@
 class Sixth {
 
-    static void start() {
+    void start() {
         Integer numbers = 1234567;
         String n = Integer.toString(numbers);
         char[] charArray = n.toCharArray();
@@ -12,20 +12,19 @@ class Sixth {
 
         double average = 0;
         double multiply = 1.0;
-        double degree =0;
-        double geomaverage = 1;
+        double geomAverage = 1;
+        double sum = 0;
         if (intArray.length > 0) {
-            double sum = 0;
             for (int anIntArray : intArray) {
                 sum += anIntArray;
                 multiply *= anIntArray;
             }
             average = sum / intArray.length;
-            degree = (1 / (double) (intArray.length));
-            geomaverage = Math.pow(multiply, degree);
+            double degree = (1 / (double) (intArray.length));
+            geomAverage = Math.pow(multiply, degree);
         }
 
         System.out.println("Average:" + average);
-        System.out.printf("geomaverage:" +"%.2f\n",  geomaverage);
+        System.out.printf("geomaverage:" + "%.2f\n", geomAverage);
     }
 }

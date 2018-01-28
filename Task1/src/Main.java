@@ -1,45 +1,49 @@
 import java.util.Scanner;
 
 public class Main {
-    private static int choice;
-    private static Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) {
         menu();
     }
 
     private static void menu() {
-
-        System.out.println("Choice number");
-        choice = scanner.nextInt();
-        switch (choice) {
-            case 0:
-                System.exit(0);
-            case 1:
-                First.start();
-                break;
-            case 2:
-                Second.start();
-                break;
-            case 3:
-                Third.start();
-                break;
-            case 4:
-                Fourth.start();
-                break;
-            case 5:
-                Fifth.start();
-                break;
-            case 6:
-                Sixth.start();
-                break;
-            case 7:
-                Seventh.start();
-                break;
-            default:
-                System.err.println("Error");
-                menu();
+        Scanner scanner = new Scanner(System.in);
+        First first = new First();
+        Second second = new Second();
+        Third third = new Third();
+        Fourth fourth = new Fourth();
+        Fifth fifth = new Fifth();
+        Sixth sixth = new Sixth();
+        Seventh seventh = new Seventh();
+        while (true) {
+            System.out.println("Choice number");
+            int choice = scanner.nextInt();
+            switch (choice) {
+                case 0:
+                    System.exit(0);
+                case 1:
+                    first.start();
+                    break;
+                case 2:
+                    second.start();
+                    break;
+                case 3:
+                    third.start();
+                    break;
+                case 4:
+                    fourth.start();
+                    break;
+                case 5:
+                    fifth.start();
+                    break;
+                case 6:
+                    sixth.start();
+                    break;
+                case 7:
+                    seventh.start();
+                    break;
+                default:
+                    System.err.println("Error");
+            }
         }
-        menu();
     }
 }
