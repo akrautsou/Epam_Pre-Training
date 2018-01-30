@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9206a404-83e3-4c03-b59b-c6e56b944212" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/out/production/Task2/First.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/out/production/Task2/Second.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/out/production/Task2/Thirst.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/Task2.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/src/First.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/src/Fourth.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/src/Second.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Task2/src/Thirst.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/block_schemes/1.PNG" afterPath="$PROJECT_DIR$/block_schemes/1.PNG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/block_schemes/2.PNG" afterPath="$PROJECT_DIR$/block_schemes/2.PNG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/block_schemes/5.PNG" afterPath="$PROJECT_DIR$/block_schemes/5.PNG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/block_schemes/6.PNG" afterPath="$PROJECT_DIR$/block_schemes/6.PNG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/block_schemes/4.PNG" afterPath="$PROJECT_DIR$/block_schemes/4.PNG" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/block_schemes/Task1.vsd" afterPath="$PROJECT_DIR$/block_schemes/Task1.vsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task1/Fifth.class" afterPath="$PROJECT_DIR$/out/production/Task1/Fifth.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task1/Sixth.class" afterPath="$PROJECT_DIR$/out/production/Task1/Sixth.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Fifth.java" afterPath="$PROJECT_DIR$/src/Fifth.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/First.java" afterPath="$PROJECT_DIR$/src/First.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sixth.java" afterPath="$PROJECT_DIR$/src/Sixth.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Fourth.java" afterPath="$PROJECT_DIR$/src/Fourth.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Task2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Task2/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,9 +24,12 @@
       <file leaf-file-name="Fourth.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Fourth.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="399">
+              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+              <folding>
+                <element signature="e#462#463#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,10 +68,10 @@
         <option value="$PROJECT_DIR$/src/Third.java" />
         <option value="$PROJECT_DIR$/src/Seventh.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Fourth.java" />
         <option value="$PROJECT_DIR$/src/First.java" />
         <option value="$PROJECT_DIR$/src/Sixth.java" />
         <option value="$PROJECT_DIR$/src/Fifth.java" />
+        <option value="$PROJECT_DIR$/src/Fourth.java" />
       </list>
     </option>
   </component>
@@ -292,7 +277,7 @@
       <workItem from="1517168674802" duration="670000" />
       <workItem from="1517234655979" duration="3317000" />
       <workItem from="1517308201508" duration="1038000" />
-      <workItem from="1517331966105" duration="493000" />
+      <workItem from="1517331966105" duration="1699000" />
     </task>
     <task id="LOCAL-00001" summary="Version 2">
       <created>1517168706495</created>
@@ -308,15 +293,21 @@
       <option name="project" value="LOCAL" />
       <updated>1517252355028</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Version 2">
+      <created>1517332463811</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1517332463811</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8312000" />
+    <option name="totallyTimeSpent" value="9518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -384,7 +375,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -464,7 +458,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -528,7 +525,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -603,9 +603,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Fourth.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="399">
+          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

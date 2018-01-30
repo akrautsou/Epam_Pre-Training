@@ -1,19 +1,22 @@
 class Fourth {
     void start() {
-        Integer numbers = 45678;
-        Integer flag = 1;
-        String txt = Integer.toString(numbers);
-        char[] array = txt.toCharArray();
-        for (int i = 0; i < array.length - 1; i++) {
-            if (Character.getNumericValue(array[i]) < Character.getNumericValue(array[i + 1])) {
-                flag++;
-            } else {
-                System.out.println("Ne vernoe");
-                break;
-            }
-        }
-        if (flag.equals(array.length)) {
+        Integer number = 4678;
+        int a, b, c, d;
+        a = number % 10;
+        number /= 10;
+        b = number % 10;
+        number /= 10;
+        c = number % 10;
+        number /= 10;
+        d = number % 10;
+        if (check(a, b, c, d)) {
             System.out.println("Vernoe");
+        } else {
+            System.out.println("Nevernoe");
         }
+    }
+
+    private boolean check(int a, int b, int c, int d) {
+        return (d > c && c > b && b > a);
     }
 }
