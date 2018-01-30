@@ -1,17 +1,6 @@
 class Fifth {
     void start() {
         Integer numbers = 45678;
-        String txt = Integer.toString(numbers);
-        int sum = 0;
-        int proizv = 1;
-        char[] array = txt.toCharArray();
-        for (char c : array) {
-            sum = sum + Character.getNumericValue(c);
-            proizv = proizv * Character.getNumericValue(c);
-        }
-        System.out.println("sum = " + sum);
-        System.out.println("proizv = " + proizv);
-
         Integer a = numbers % 10;
         numbers = numbers / 10;
         Integer b = numbers % 10;
@@ -30,5 +19,16 @@ class Fifth {
 
         System.out.println("sum = " + sum1);
         System.out.println("proizv = " + proizv1);
+
+        /*        String txt = Integer.toString(numbers);
+        int sum = 0;
+        int proizv = 1;
+        char[] array = txt.toCharArray();
+        for (char c : array) {
+            sum = sum + Character.getNumericValue(c);
+            proizv = proizv * Character.getNumericValue(c);
+        }
+        System.out.println("sum = " + sum);
+        System.out.println("proizv = " + proizv);*/
     }
 }

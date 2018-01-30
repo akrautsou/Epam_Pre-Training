@@ -8,19 +8,9 @@ class First {
         System.out.println("Do you wanna see kg or tons");
         System.out.println("1 - kg");
         System.out.println("2 - tons");
-        int choice = scanner.nextInt();
-        switch (choice) {
-            case 1:
-                System.out.println(intoKg(weight));
-                break;
-            case 2:
-                System.out.println(intoTon(weight));
-                break;
-            default:
-                System.err.println("Error");
-                break;
+        System.out.println(intoKg(weight));
+        System.out.println(intoTon(weight));
 
-        }
     }
 
     private Double intoKg(Double weight) {
