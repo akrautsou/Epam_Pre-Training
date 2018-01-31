@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Second {
     public static void main(String[] args) {
-       // firstTry();
-        //secondTry();
-        //thirstTry();
-        //fourthTry();
-        //fifthTry();
+       firstTry();
+        secondTry();
+        thirstTry();
+        fourthTry();
+        fifthTry();
     }
     // switch
     private static void firstTry()  {
