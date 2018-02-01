@@ -2,15 +2,14 @@ import java.util.Scanner;
 
 public class Fifth {
     public static void main(String[] args) {
-        Integer number;
-        Integer s;
-        Integer d;
-        Integer e;
         Scanner scanner = new Scanner(System.in);
-        number = scanner.nextInt();
-        s = number / 100;
-
+        Integer number = scanner.nextInt();
+        if (number == 0) {
+            System.out.println("Ноль");
+        }
+        Integer s = number / 100;
         number = number % 100;
+
         switch (s) {
             case 1:
                 System.out.println("Сто");
@@ -40,15 +39,42 @@ public class Fifth {
                 System.out.println("девятьсот");
                 break;
         }
-        d = number / 10;
-        e = number % 10;
-        if (e > 11) {
+        Integer d = number / 10;
+        if (number > 9 && number < 20) {
+            switch (number) {
+                case 10:
+                    System.out.println("десять");
+                    break;
+                case 11:
+                    System.out.println("одинадцать");
+                    break;
+                case 12:
+                    System.out.println("двенадцать");
+                    break;
+                case 13:
+                    System.out.println("тринадцать");
+                    break;
+                case 14:
+                    System.out.println("четырнадцать");
+                    break;
+                case 15:
+                    System.out.println("пятнадцать");
+                    break;
+                case 16:
+                    System.out.println("шестнадцать");
+                    break;
+                case 17:
+                    System.out.println("семнадцать");
+                    break;
+                case 18:
+                    System.out.println("восемьнадцать");
+                    break;
+                case 19:
+                    System.out.println("девятнадцать");
+                    break;
+            }
+        } else {
             switch (d) {
-                case 0:
-                    break;
-                case 1:
-                    System.out.println("десят");
-                    break;
                 case 2:
                     System.out.println("двадцать");
                     break;
@@ -74,9 +100,8 @@ public class Fifth {
                     System.out.println("девяносто");
                     break;
             }
+            Integer e = number % 10;
             switch (e) {
-                case 0:
-                    break;
                 case 1:
                     System.out.println("один");
                     break;
@@ -105,39 +130,7 @@ public class Fifth {
                     System.out.println("девять");
                     break;
             }
-        } else {
-            switch (e) {
-                case 0:
-                    break;
-                case 1:
-                    System.out.println("одинадцать");
-                    break;
-                case 2:
-                    System.out.println("двенадцать");
-                    break;
-                case 3:
-                    System.out.println("тринадцать");
-                    break;
-                case 4:
-                    System.out.println("четырнадцать");
-                    break;
-                case 5:
-                    System.out.println("пятнадцать");
-                    break;
-                case 6:
-                    System.out.println("шестнадцать");
-                    break;
-                case 7:
-                    System.out.println("семнадцать");
-                    break;
-                case 8:
-                    System.out.println("восемьнадцать");
-                    break;
-                case 9:
-                    System.out.println("девятнадцать");
-                    break;
-            }
-
         }
+
     }
 }
