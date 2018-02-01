@@ -12,12 +12,12 @@ public class Fourth {
 
         System.out.println("Enter year");
         data.setYear(scanner.nextInt());
-        if ((data.getMounth() == 1 ||
+        if (data.getMounth() == 1 ||
                 data.getMounth() == 3 ||
                 data.getMounth() == 5 ||
                 data.getMounth() == 7 ||
                 data.getMounth() == 8 ||
-                data.getMounth() == 10) &&
+                data.getMounth() == 10 &&
                         data.getDay() == 31) {
             System.out.println(1 + " " + (data.getMounth() + 1) + " " + data.getYear());
         } else if ((data.getMounth() == 4 ||
