@@ -7,10 +7,9 @@ public class First {
 
     private static void start() {
         Integer head=3;
-        Integer year;
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter");
-        year = scanner.nextInt();
+        Integer year = scanner.nextInt();
         if (year < 200) {
             head = 200 * 3 + head;
         }

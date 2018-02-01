@@ -7,7 +7,7 @@ public class Thirst {
         if(number == 0){
             System.out.println("You're happy");
         }else if (number < 50){
-            System.out.println("You're dovolen");
+            System.out.println("You're okay");
         }else if (number < 100){
             System.out.println("you're normal");
         }else if (number < 150){
