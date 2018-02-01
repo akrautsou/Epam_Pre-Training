@@ -1,15 +1,17 @@
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 public class Second {
     public static void main(String[] args) {
-       firstTry();
+        firstTry();
         secondTry();
         thirstTry();
         fourthTry();
         fifthTry();
     }
+
     // switch
-    private static void firstTry()  {
+    private static void firstTry() {
         Character symbol;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter");
@@ -21,22 +23,23 @@ public class Second {
                 case 'i':
                 case 'o':
                 case 'u':
-                    System.out.println("Glasn");
+                    System.out.println("vovel");
                     break;
                 case 'y':
                 case 'w':
-                    System.out.println("psevdo");
+                    System.out.println("diphthong ");
                     break;
                 default:
-                    System.out.println("sogl");
+                    System.out.println("consonant");
                     break;
             }
         } else System.out.println("Error");
     }
+
     // array
     private static void secondTry() {
         char[] vovels = {'a', 'i', 'o', 'e', 'u'};
-        char[] psevdo = {'y', 'w'};
+        char[] diphthong  = {'y', 'w'};
         char symbol;
         System.out.println("Enter");
         Scanner scanner = new Scanner(System.in);
@@ -47,10 +50,11 @@ public class Second {
                 symbol == vovels[3] ||
                 symbol == vovels[4]) {
             System.out.println("Glans");
-        } else if (symbol == psevdo[0] || symbol == psevdo[1]) {
-            System.out.println("Psevdo");
-        } else System.out.println("Sogl");
+        } else if (symbol == diphthong [0] || symbol == diphthong [1]) {
+            System.out.println("diphthong ");
+        } else System.out.println("consonant");
     }
+
     //if
     private static void thirstTry() {
         char symbol;
@@ -64,23 +68,45 @@ public class Second {
                 symbol == 'u') {
             System.out.println("Glans");
         } else if (symbol == 'y' || symbol == 'w') {
-            System.out.println("Psevdo");
-        } else System.out.println("Sogl");
+            System.out.println("diphthong ");
+        } else System.out.println("consonant");
     }
+
     //contains
     private static void fourthTry() {
-        String  symbol;
+        String symbol;
         System.out.println("Enter");
         Scanner scanner = new Scanner(System.in);
         symbol = scanner.next();
-        if("a i o e u".contains(symbol)){
-            System.out.println("glasn");
-        }else if ("y w".contains(symbol)){
-            System.out.println("psevdo");
-        }else System.out.println("sogl");
+        if ("a i o e u".contains(symbol)) {
+            System.out.println("vovel");
+        } else if ("y w".contains(symbol)) {
+            System.out.println("diphthong ");
+        } else System.out.println("consonant");
 
     }
+
     //code
-    private static void fifthTry(){
+    private static void fifthTry() {
+        System.out.println("Enter");
+        Scanner scanner = new Scanner(System.in);
+        char c = scanner.next().charAt(0);
+        String s = Character.toString(c);
+        byte[] codes = new byte[0];
+        try {
+            codes = s.getBytes("US-ASCII");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        byte code = codes[0];
+        if (code == 97 ||
+                code == 105 ||
+                code == 111 ||
+                code == 101 ||
+                code == 117) {
+            System.out.println("Glans");
+        } else if (code == 119 || code == 121) {
+            System.out.println("diphthong ");
+        } else System.out.println("consonant");
     }
 }

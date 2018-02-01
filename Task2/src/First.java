@@ -6,22 +6,21 @@ public class First {
     }
 
     private static void start() {
-        Integer age = 3;
         Integer head=3;
         Integer year;
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter");
         year = scanner.nextInt();
         if (year < 200) {
-            head = 200 * 3 + age;
+            head = 200 * 3 + head;
         }
         if(year > 199){
-            head = 200*3 + age;
+            head = 200*3 + head;
             year = year -200;
             head +=year*2;
         }
         if(year>299){
-            head = 200*3+age;
+            head = 200*3+head;
             year = year - 200;
             head += year*2;
             year = year -100;
