@@ -7,13 +7,13 @@ public class Main {
 
     private static void menu() {
         Scanner scanner = new Scanner(System.in);
-        First first = new First();
-        Second second = new Second();
-        Third third = new Third();
-        Fourth fourth = new Fourth();
-        Fifth fifth = new Fifth();
-        Sixth sixth = new Sixth();
-        Seventh seventh = new Seventh();
+        DinoWeight dinoWeight = new DinoWeight();
+        Radius radius = new Radius();
+        Change change = new Change();
+        Sequence sequence = new Sequence();
+        FindSumAndMultiply findSumAndMultiply = new FindSumAndMultiply();
+        FindAverage findAverage = new FindAverage();
+        NumberReverse numberReverse = new NumberReverse();
         while (true) {
             System.out.println("Choice number");
             int choice = scanner.nextInt();
@@ -21,25 +21,25 @@ public class Main {
                 case 0:
                     System.exit(0);
                 case 1:
-                    first.start();
+                    dinoWeight.start();
                     break;
                 case 2:
-                    second.start();
+                    radius.start();
                     break;
                 case 3:
-                    third.start();
+                    change.start();
                     break;
                 case 4:
-                    fourth.start();
+                    sequence.start();
                     break;
                 case 5:
-                    fifth.start();
+                    findSumAndMultiply.start();
                     break;
                 case 6:
-                    sixth.start();
+                    findAverage.start();
                     break;
                 case 7:
-                    seventh.start();
+                    numberReverse.start();
                     break;
                 default:
                     System.err.println("Error");

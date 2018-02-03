@@ -1,7 +1,7 @@
-class Seventh {
-    void start() {
-        Integer numberStart = 1234567;
-        Integer numberFinish = reverse(numberStart);
+class NumberReverse {
+    public void start() {
+        int numberStart = 1234567;
+        int numberFinish = reverse(numberStart);
         System.out.println("first:" + numberStart);
         System.out.println("second:" + numberFinish);
     }

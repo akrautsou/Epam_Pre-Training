@@ -1,7 +1,7 @@
-class Third {
-    void start() {
-        Integer a = 2;
-        Integer b = 3;
+class Change {
+    public void start() {
+        int a = 2;
+        int b = 3;
         a = a + b;
         b = a - b;
         a = a - b;
