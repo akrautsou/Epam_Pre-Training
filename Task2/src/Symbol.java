@@ -23,7 +23,7 @@ public class Symbol {
                 case 'i':
                 case 'o':
                 case 'u':
-                    System.out.println("Vovel");
+                    System.out.println("Vowel");
                     break;
                 case 'y':
                 case 'w':
@@ -38,18 +38,18 @@ public class Symbol {
 
     // array
     private static void secondTry() {
-        char[] vovels = {'a', 'i', 'o', 'e', 'u'};
+        char[] vowels = {'a', 'i', 'o', 'e', 'u'};
         char[] diphthong  = {'y', 'w'};
         char symbol;
         System.out.println("Enter");
         Scanner scanner = new Scanner(System.in);
         symbol = scanner.next().charAt(0);
-        if (symbol == vovels[0] ||
-                symbol == vovels[1] ||
-                symbol == vovels[2] ||
-                symbol == vovels[3] ||
-                symbol == vovels[4]) {
-            System.out.println("Vovel");
+        if (symbol == vowels[0] ||
+                symbol == vowels[1] ||
+                symbol == vowels[2] ||
+                symbol == vowels[3] ||
+                symbol == vowels[4]) {
+            System.out.println("Vowel");
         } else if (symbol == diphthong [0] || symbol == diphthong [1]) {
             System.out.println("Diphthong ");
         } else System.out.println("Consonant");
@@ -66,7 +66,7 @@ public class Symbol {
                 symbol == 'o' ||
                 symbol == 'e' ||
                 symbol == 'u') {
-            System.out.println("Vovel");
+            System.out.println("Vowel");
         } else if (symbol == 'y' || symbol == 'w') {
             System.out.println("Diphthong ");
         } else System.out.println("Consonant");
@@ -79,7 +79,7 @@ public class Symbol {
         Scanner scanner = new Scanner(System.in);
         symbol = scanner.next();
         if ("a i o e u".contains(symbol)) {
-            System.out.println("Vovel");
+            System.out.println("Vowel");
         } else if ("y w".contains(symbol)) {
             System.out.println("Diphthong ");
         } else System.out.println("Consonant");
@@ -104,7 +104,7 @@ public class Symbol {
                 code == 111 ||
                 code == 101 ||
                 code == 117) {
-            System.out.println("Vovel");
+            System.out.println("Vowel");
         } else if (code == 119 || code == 121) {
             System.out.println("Diphthong ");
         } else System.out.println("Consonant");
