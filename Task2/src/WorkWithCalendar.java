@@ -26,32 +26,35 @@ public class WorkWithCalendar {
     }
 
     private static String check(Day data) {
-        if ((data.getMonth() == 1 ||
-                data.getMonth() == 5 ||
-                data.getMonth() == 7 ||
-                data.getMonth() == 8 ||
-                data.getMonth() == 10) &&
-                data.getDay() == 31) {
-            return (1 + " " + (data.getMonth() + 1) + " " + data.getYear());
-        }
-        if ((data.getMonth() == 4 ||
-                data.getMonth() == 6 ||
-                data.getMonth() == 9 ||
-                data.getMonth() == 11) &&
-                data.getDay() == 30) {
-            return (1 + " " + (data.getMonth() + 1) + " " + data.getYear());
-        }
-        if ((data.getYear() % 4 == 0 && data.getMonth() == 2 && data.getDay() == 29)) {
-            return (1 + " " + 3 + " " + data.getYear());
-        }
-        if ((data.getYear() % 4 != 0 && data.getMonth() == 2 && data.getDay() == 28)) {
-            return (1 + " " + 3 + " " + data.getYear());
-        }
-        if (data.getMonth() == 12 && data.getDay() == 31) {
-            return (1 + " " + 1 + " " + (data.getYear() + 1));
-        } else {
-            return ((data.getDay() + 1) + " " + (data.getMonth() + 1) + " " + (data.getYear() + 1));
-        }
+        if (data.getMonth() > 13 || data.getMonth() < 0 || data.getDay() > 0 || data.getDay() < 32) {
+            if ((data.getMonth() == 1 ||
+                    data.getMonth() == 5 ||
+                    data.getMonth() == 7 ||
+                    data.getMonth() == 8 ||
+                    data.getMonth() == 10) &&
+                    data.getDay() == 31) {
+                return (1 + " " + (data.getMonth() + 1) + " " + data.getYear());
+            }
+            if ((data.getMonth() == 4 ||
+                    data.getMonth() == 6 ||
+                    data.getMonth() == 9 ||
+                    data.getMonth() == 11) &&
+                    data.getDay() == 30) {
+                return (1 + " " + (data.getMonth() + 1) + " " + data.getYear());
+            }
+            if ((data.getYear() % 4 == 0 && data.getMonth() == 2 && data.getDay() == 29)) {
+                return (1 + " " + 3 + " " + data.getYear());
+            }
+            if ((data.getYear() % 4 != 0 && data.getMonth() == 2 && data.getDay() == 28)) {
+                return (1 + " " + 3 + " " + data.getYear());
+            }
+            if (data.getMonth() == 12 && data.getDay() == 31) {
+                return (1 + " " + 1 + " " + (data.getYear() + 1));
+            } else {
+                return ((data.getDay() + 1) + " " + data.getMonth() + " " +data.getYear());
+            }
+        }else return ("Uncorrected");
+
 
     }
 
