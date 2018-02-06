@@ -3,19 +3,19 @@ package WorkWithCalendar;
 import java.util.Objects;
 
 public class CheckData {
-    public static final int FIRST_DAY_OF_THE_MONTH = 1;
-    public static final int JANUARY = 1;
-    public static final int FEBRUARY = 2;
-    public static final int MARCH = 3;
-    public static final int APRIL = 4;
-    public static final int MAY = 5;
-    public static final int JUNE = 6;
-    public static final int JULY = 7;
-    public static final int AUGUST = 8;
-    public static final int SEPTEMBER = 9;
-    public static final int OCTOBER = 10;
-    public static final int NOVEMBER = 11;
-    public static final int DECEMBER = 12;
+    private static final int FIRST_DAY_OF_THE_MONTH = 1;
+    private static final int JANUARY = 1;
+    private static final int FEBRUARY = 2;
+    private static final int MARCH = 3;
+    private static final int APRIL = 4;
+    private static final int MAY = 5;
+    private static final int JUNE = 6;
+    private static final int JULY = 7;
+    private static final int AUGUST = 8;
+    private static final int SEPTEMBER = 9;
+    private static final int OCTOBER = 10;
+    private static final int NOVEMBER = 11;
+    private static final int DECEMBER = 12;
 
 
     public String getTomorrowData(Day data) {
@@ -55,7 +55,7 @@ public class CheckData {
         return string;
     }
 
-    public boolean isLeapYear(int year) {
+    private boolean isLeapYear(int year) {
         return ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0);
     }
 }
