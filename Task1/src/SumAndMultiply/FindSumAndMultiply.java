@@ -2,31 +2,21 @@ package SumAndMultiply;
 
 public class FindSumAndMultiply {
     public int findSum(int number) {
-        int a = number % 10;
-        int b = (number /= 10) % 10;
-        int c = (number /= 10) % 10;
-        int d = (number /= 10) % 10;
-        int e = (number / 10) % 10;
-        return (a + b + c + d + e);
+        int sum = number % 10;
+        sum += (number /= 10) % 10;
+        sum += (number /= 10) % 10;
+        sum += (number /= 10) % 10;
+        sum += (number / 10) % 10;
+        return sum;
     }
 
     public int findMultiply(int number) {
 
-        int a = number % 10;
-        int b = (number /= 10) % 10;
-        int c = (number /= 10) % 10;
-        int d = (number /= 10) % 10;
-        int e = (number / 10) % 10;
-        return (a * b * c * d * e);
+        int multiply = number % 10;
+        multiply *= (number /= 10) % 10;
+        multiply *= (number /= 10) % 10;
+        multiply *= (number /= 10) % 10;
+        multiply *= (number / 10) % 10;
+        return multiply;
     }
 }
-  /*        String txt = Integer.toString(numbers);
-        int sum = 0;
-        int proizv = 1;
-        char[] array = txt.toCharArray();
-        for (char c : array) {
-            sum = sum + Character.getNumericValue(c);
-            proizv = proizv * Character.getNumericValue(c);
-        }
-        System.out.println("sum = " + sum);
-        System.out.println("proizv = " + proizv);*/

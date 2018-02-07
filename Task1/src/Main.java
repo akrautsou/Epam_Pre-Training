@@ -43,7 +43,7 @@ public class Main {
                 case 3:
                     int a = 2;
                     int b = 3;
-                    change.start(a, b);
+                    view.output(change.start(a, b));
                     break;
                 case 4:
                     int number = 4678;
