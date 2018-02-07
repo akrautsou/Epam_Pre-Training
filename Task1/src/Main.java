@@ -1,3 +1,12 @@
+import AverageValue.FindAverage;
+import ChangePlace.Change;
+import ConversionFromGramm.DinoWeight;
+import Radius.Radius;
+import ReverseNumber.NumberReverse;
+import Sequnce.Sequence;
+import SumAndMultiply.FindSumAndMultiply;
+import Viewer.View;
+
 import java.util.Scanner;
 
 public class Main {
@@ -14,6 +23,7 @@ public class Main {
         FindSumAndMultiply findSumAndMultiply = new FindSumAndMultiply();
         FindAverage findAverage = new FindAverage();
         NumberReverse numberReverse = new NumberReverse();
+        View view = new View();
         while (true) {
             System.out.println("Choice number");
             int choice = scanner.nextInt();
@@ -21,25 +31,37 @@ public class Main {
                 case 0:
                     System.exit(0);
                 case 1:
-                    dinoWeight.start();
+                    double weight = 650;
+                    view.output(dinoWeight.intoKg(weight));
+                    view.output(dinoWeight.intoTon(weight));
                     break;
                 case 2:
-                    radius.start();
+                    int radFirst = 5;
+                    int radSecond = 3;
+                    view.output(radius.radiusOfABagel(radFirst, radSecond));
                     break;
                 case 3:
-                    change.start();
+                    int a = 2;
+                    int b = 3;
+                    change.start(a, b);
                     break;
                 case 4:
-                    sequence.start();
+                    int number = 4678;
+                    view.output(sequence.checkSequence(number));
                     break;
                 case 5:
-                    findSumAndMultiply.start();
+                    int digit = 45678;
+                    view.output(findSumAndMultiply.findMultiply(digit));
+                    view.output(findSumAndMultiply.findSum(digit));
                     break;
                 case 6:
-                    findAverage.start();
+                    int numberForSix = 1234567;
+                    view.output(findAverage.findAverage(findAverage.sumForAverage(numberForSix)));
+                    view.output(findAverage.geomAverage(findAverage.multiplyForAverage(numberForSix)));
                     break;
                 case 7:
-                    numberReverse.start();
+                    int numberStart = 1234567;
+                    view.output(numberReverse.reverse(numberStart));
                     break;
                 default:
                     System.err.println("Error");

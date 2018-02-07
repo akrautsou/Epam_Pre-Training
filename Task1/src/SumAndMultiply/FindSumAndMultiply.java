@@ -1,23 +1,23 @@
-class FindSumAndMultiply {
-    public void start() {
-        int number = 45678;
+package SumAndMultiply;
+
+public class FindSumAndMultiply {
+    public int findSum(int number) {
         int a = number % 10;
         int b = (number /= 10) % 10;
-        int c = (number /=10) % 10;
+        int c = (number /= 10) % 10;
         int d = (number /= 10) % 10;
-        int e = (number /= 10) % 10;
-        System.out.println("sum = " + findSum(a,b,c,d,e));
-        System.out.println("multiply = " + findMultiply(a,b,c,d,e));
-
-
+        int e = (number / 10) % 10;
+        return (a + b + c + d + e);
     }
 
-    private int findSum(int a, int b, int c, int d, int e) {
-        return ( a + b + c + d + e);
-    }
+    public int findMultiply(int number) {
 
-    private int findMultiply(int a, int b, int c, int d, int e) {
-        return ( a * b * c * d * e);
+        int a = number % 10;
+        int b = (number /= 10) % 10;
+        int c = (number /= 10) % 10;
+        int d = (number /= 10) % 10;
+        int e = (number / 10) % 10;
+        return (a * b * c * d * e);
     }
 }
   /*        String txt = Integer.toString(numbers);

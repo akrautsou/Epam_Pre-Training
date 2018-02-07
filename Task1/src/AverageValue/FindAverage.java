@@ -1,29 +1,38 @@
-class FindAverage {
+package AverageValue;
 
-    public void start() {
-        int number = 1234567;
-        double sum = 0;
-        double multiply = 1;
+public class FindAverage {
+    private static final double DEGREE = 1 / (double) (7);
+
+
+    public int sumForAverage(int number) {
         int a = number % 10;
         int b = (number /= 10) % 10;
         int c = (number /= 10) % 10;
         int d = (number /= 10) % 10;
         int e = (number /= 10) % 10;
         int f = (number /= 10) % 10;
-        int g = (number /= 10) % 10;
-        sum = sum + a + b + c + d + e + f + g;
-        multiply = multiply * a * b * c * d * e * f * g;
-        double degree = (1 / (double) (7));
+        int g = (number / 10) % 10;
+        return a + b + c + d + e + f + g;
 
-        System.out.println("Average:" + findAverage(sum));
-        System.out.printf("geomaverage:" + "%.2f\n", geomAverage(multiply, degree));
     }
 
-    private double geomAverage(double multiply, double degree) {
-        return Math.pow(multiply, degree);
+    public int multiplyForAverage(int number) {
+        int a = number % 10;
+        int b = (number /= 10) % 10;
+        int c = (number /= 10) % 10;
+        int d = (number /= 10) % 10;
+        int e = (number /= 10) % 10;
+        int f = (number /= 10) % 10;
+        int g = (number / 10) % 10;
+        return a * b * c * d * e * f * g;
+
     }
 
-    private double findAverage(double sum) {
+    public double geomAverage(double multiply) {
+        return Math.pow(multiply, DEGREE);
+    }
+
+    public double findAverage(double sum) {
         return (sum / 7);
     }
 }
