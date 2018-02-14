@@ -16,14 +16,14 @@ public class Main {
         int number = 3;
         double digit = 3.5;
         int degree = 2;
-        char a = '1';
-        char b = '2';
-        char c = '3';
+        char a = 'A';
+        char b = 'B';
+        char c = 'C';
 
         viewer.output(sumOfDigit.getSum(number));
         viewer.output(fibonacci.getFibonacci(number));
-        viewer.output(power.getPower(digit,degree));
+        viewer.output(power.getPower(digit, degree));
         viewer.output(equalsClass.getEquals(sumOfDigit.getSum(degree), number));
-        hanoiTower.moveDisks(number, a,b,c);
+        hanoiTower.moveDisks(number, a, b, c);
     }
 }

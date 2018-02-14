@@ -5,8 +5,8 @@ public class Power {
         if (degree == 0)
             return 1.0;
         if (degree < 0)
-            return 1.0/getPower(number, -degree);
+            return 1.0 / getPower(number, -degree);
         else
-            return number * getPower(number, degree-1);
+            return number * getPower(number, degree - 1);
     }
 }
