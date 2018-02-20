@@ -15,14 +15,14 @@ public class MainFifthTask {
         viewer.output(nissan.getInfoAboutCollection());
         viewer.output(nissan.output());
         viewer.output(nissan.searchModel("Almera"));
-        System.out.println("________________");
         viewer.output(nissan.findAveragePrice());
-        System.out.println("________________");
         viewer.output(nissan.outputIndex(0));
         nissan.remove(2);
         viewer.output(nissan.output());
         nissan.clear();
         viewer.output(nissan.output());
+        infinity.create();
+        viewer.output(infinity.output());
 
     }
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core</OriginalElement>
+  <nodes>
+    <node x="130.0" y="580.0">by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Manufacturer.Nissan</node>
+    <node x="139.25" y="0.0">by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Car</node>
+    <node x="0.0" y="662.0">by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Viewer</node>
+    <node x="2.0" y="580.0">by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Manufacturer.Infinity</node>
+    <node x="461.0" y="466.0">by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.ShowRoom</node>
+    <node x="284.0" y="466.0">by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Type</node>
+    <node x="260.0" y="316.5">by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.EngineType.OilCar</node>
+    <node x="0.0" y="466.0">by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.WorkClass</node>
+    <node x="0.0" y="276.0">by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.EngineType.ElectraCar</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.EngineType.OilCar" target="by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Car">
+      <point x="0.0" y="-32.0" />
+      <point x="374.5" y="251.0" />
+      <point x="301.25" y="251.0" />
+      <point x="54.0" y="113.0" />
+    </edge>
+    <edge source="by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Manufacturer.Nissan" target="by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.WorkClass">
+      <point x="0.0" y="-18.5" />
+      <point x="183.0" y="555.0" />
+      <point x="179.25" y="555.0" />
+      <point x="59.75" y="32.0" />
+    </edge>
+    <edge source="by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Manufacturer.Infinity" target="by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.WorkClass">
+      <point x="0.0" y="-18.5" />
+      <point x="56.0" y="555.0" />
+      <point x="59.75" y="555.0" />
+      <point x="-59.75" y="32.0" />
+    </edge>
+    <edge source="by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.EngineType.ElectraCar" target="by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Car">
+      <point x="0.0" y="-72.5" />
+      <point x="120.0" y="251.0" />
+      <point x="193.25" y="251.0" />
+      <point x="-54.0" y="113.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="124.0" y="361.5" />
+  <SelectedNodes>
+    <node>by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Manufacturer.Nissan</node>
+    <node>by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Car</node>
+    <node>by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Viewer</node>
+    <node>by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Manufacturer.Infinity</node>
+    <node>by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.ShowRoom</node>
+    <node>by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Type</node>
+    <node>by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.EngineType.OilCar</node>
+    <node>by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.WorkClass</node>
+    <node>by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.EngineType.ElectraCar</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
