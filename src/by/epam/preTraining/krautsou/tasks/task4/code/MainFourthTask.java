@@ -20,16 +20,12 @@ public class MainFourthTask {
 
         viewer.output(SumOfDigit.getSumRecursion(number));
         viewer.output(SumOfDigit.getSumIteration(number));
-
         viewer.output(Fibonacci.fibonacciRecursive(number));
         viewer.output(Fibonacci.fibonacciIterative(number));
-
         viewer.output(Power.getPowerRecursion(digit, degree));
         viewer.output(Power.getPowerIteration(digit, degree));
-
-        viewer.output(ClassForEquals.equalsRecursion(SumOfDigit.getSumRecursion(degree), number));
-        viewer.output(ClassForEquals.equalsIteration(SumOfDigit.getSumRecursion(degree), number));
-
+        viewer.output(ClassForEquals.equalsRecursion(degree, number));
+        viewer.output(ClassForEquals.equalsIteration(degree, number));
         viewer.output(hanoiTower.moveDisks(number, a, b, c));
     }
 }
