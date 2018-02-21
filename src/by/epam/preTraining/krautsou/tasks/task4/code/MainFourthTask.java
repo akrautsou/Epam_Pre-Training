@@ -15,17 +15,22 @@ public class MainFourthTask {
         ClassForEquals equalsClass = new ClassForEquals();
         HanoiTower hanoiTower = new HanoiTower();
         Power power = new Power();
-        int number = 3;
+        int number = 5;
         double digit = 3.5;
         int degree = 2;
         char a = 'A';
         char b = 'B';
         char c = 'C';
 
-        viewer.output(sumOfDigit.getSum(number));
+        viewer.output(sumOfDigit.getSumRecursion(number));
+        viewer.output(sumOfDigit.getSumIteration(number));
         viewer.output(fibonacci.getFibonacci(number));
-        viewer.output(power.getPower(digit, degree));
-        viewer.output(equalsClass.getEquals(sumOfDigit.getSum(degree), number));
-        hanoiTower.moveDisks(number, a, b, c);
+        viewer.output(fibonacci.fibonacciIterative(number));
+        viewer.output(power.getPowerRecursion(digit, degree));
+        viewer.output(power.getPowerIteration(digit, degree));
+
+
+        viewer.output(equalsClass.getEquals(sumOfDigit.getSumRecursion(degree), number));
+        viewer.output(hanoiTower.moveDisks(number, a, b, c));
     }
 }
