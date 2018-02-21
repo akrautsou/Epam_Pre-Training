@@ -1,7 +1,7 @@
 package by.epam.preTraining.krautsou.tasks.task4.code.power;
 
 public class Power {
-    public double getPowerRecursion(double number, int degree) {
+    public static double getPowerRecursion(double number, int degree) {
         if (degree == 0) {
             return 1.0;
         }
@@ -12,7 +12,7 @@ public class Power {
         }
     }
 
-    public double getPowerIteration(double number, int degree) {
+    public static double getPowerIteration(double number, int degree) {
         double result = 1;
         for (int i = 0; i < degree; i++) {
             result *= number;
