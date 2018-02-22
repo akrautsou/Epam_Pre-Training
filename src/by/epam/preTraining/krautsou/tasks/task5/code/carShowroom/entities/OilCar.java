@@ -1,7 +1,6 @@
-package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.EngineType;
+package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities;
 
-import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Car;
-import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Type;
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.Type;
 
 public class OilCar extends Car {
     private int volumeOfFuelTank;

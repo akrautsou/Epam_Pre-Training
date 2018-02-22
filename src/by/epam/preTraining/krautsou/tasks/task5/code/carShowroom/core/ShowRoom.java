@@ -1,4 +1,6 @@
-package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core;
+package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core;
+
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.Car;
 
 import java.util.Arrays;
 
@@ -11,7 +13,7 @@ public class ShowRoom {
         cars = new Car[5];
     }
 
-    public int getQuantity() {
+    int getQuantity() {
         return quantity;
     }
 

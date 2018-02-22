@@ -1,9 +1,9 @@
-package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Manufacturer;
+package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.manufacturer;
 
-import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.EngineType.ElectraCar;
-import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.EngineType.OilCar;
-import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.Type;
-import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core.WorkClass;
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.ElectraCar;
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.OilCar;
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.Type;
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.WorkClass;
 
 public class Nissan extends WorkClass {
     public void create() {

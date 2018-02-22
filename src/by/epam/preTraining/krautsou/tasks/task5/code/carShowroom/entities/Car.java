@@ -1,4 +1,6 @@
-package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core;
+package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities;
+
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.Type;
 
 public class Car {
     private String manufacturer;

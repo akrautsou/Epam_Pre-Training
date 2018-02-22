@@ -1,4 +1,6 @@
-package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.Core;
+package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core;
+
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.Car;
 
 import java.util.Objects;
 
