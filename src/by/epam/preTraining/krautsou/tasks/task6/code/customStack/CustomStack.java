@@ -12,7 +12,7 @@ public class CustomStack {
         array = new int[inCapacity];
     }
 
-    public void push(int ...element){
+    public void push(int... element) {
         for (int anElement : element) {
             topElement++;
             array[topElement] = anElement;
@@ -26,8 +26,8 @@ public class CustomStack {
     }
 
     public int pop() throws CustomException {
-        if (topElement == EMPTY_ELEMENT)return 0; //throw new CustomException("Empty");
-        array[topElement] =0;
+        if (topElement == EMPTY_ELEMENT) return 0; //throw new CustomException("Empty");
+        array[topElement] = 0;
         return array[topElement--];
     }
 
@@ -39,7 +39,7 @@ public class CustomStack {
         return topElement == (capacity - 1);
     }
 
-    public boolean customIsEmpty(){
+    public boolean customIsEmpty() {
         return topElement == EMPTY_ELEMENT;
     }
 
