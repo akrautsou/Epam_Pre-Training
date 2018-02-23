@@ -3,32 +3,79 @@ package by.epam.preTraining.krautsou.tasks.task6.code.customStack;
 public class CustomStack {
     private static final int EMPTY_ELEMENT = 0;
     private int capacity;
+    private int numberOfElements = 0;
     private int topElement;
-    private int[] array;
+    private Object[] array;
 
     public CustomStack(int inCapacity) {
         topElement = -1;
         this.capacity = inCapacity;
-        array = new int[inCapacity];
+        array = new Object[inCapacity];
     }
 
-    public void push(int... element) {
-        for (int anElement : element) {
+    public int getNumberOfElements() {
+        return numberOfElements;
+    }
+
+    public void setNumberOfElements(int numberOfElements) {
+        this.numberOfElements = numberOfElements;
+    }
+
+    public int getTopElement() {
+        return topElement;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public Object[] getArray() {
+        return array;
+    }
+
+    public void setArray(Object[] array) {
+        this.array = array;
+    }
+
+    public Object getArrayIndex(int index) {
+        return array[index];
+    }
+
+    public void setTopElement(int topElement) {
+        this.topElement = topElement;
+    }
+
+    /*public void push(Object... element) {
+        for (Object anElement : element) {
             topElement++;
             array[topElement] = anElement;
+            numberOfElements++;
+        }
+    }*/
 
+    public void push(Object ...element) {
+        for (Object anElement : element) {
+            if (numberOfElements < capacity) {
+                Object[] tempArray = array;
+                array = new Object[++capacity];
+                System.arraycopy(tempArray, 0, array, 0, tempArray.length);
+                array[numberOfElements++] = anElement;
+            } else {
+                array[numberOfElements++] = anElement;
+            }
+            topElement++;
         }
     }
 
-    public void push(int element) {
-        topElement++;
-        array[topElement] = element;
-    }
-
-    public int pop() throws CustomException {
-        if (topElement == EMPTY_ELEMENT) return 0; //throw new CustomException("Empty");
-        array[topElement] = 0;
-        return array[topElement--];
+    public void pop() throws CustomException {
+        if (topElement == EMPTY_ELEMENT) return; //throw new CustomException("Empty");
+        array[topElement] = null;
+        numberOfElements--;
+        topElement--;
     }
 
     public int customSize() {
@@ -43,28 +90,9 @@ public class CustomStack {
         return topElement == EMPTY_ELEMENT;
     }
 
-    public int peek() throws CustomException {
-        if (topElement == EMPTY_ELEMENT) return 0;//throw new CustomException("Empty");
+    public Object peek() throws CustomException {
+        if (topElement == EMPTY_ELEMENT) return null;//throw new CustomException("Empty");
         return array[topElement];
     }
 
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    public int[] getArray() {
-        return array;
-    }
-
-    public void setArray(int[] array) {
-        this.array = array;
-    }
-
-    public int getArrayIndex(int index) {
-        return array[index];
-    }
 }
