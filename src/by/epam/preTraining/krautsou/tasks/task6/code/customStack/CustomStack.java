@@ -62,7 +62,9 @@ public class CustomStack {
             if (numberOfElements < capacity) {
                 Object[] tempArray = array;
                 array = new Object[++capacity];
-                System.arraycopy(tempArray, 0, array, 0, tempArray.length);
+                for (int i = 0; i < tempArray.length; i++) {
+                    array[i] = tempArray[i];
+                }
                 array[numberOfElements++] = anElement;
             } else {
                 array[numberOfElements++] = anElement;

@@ -3,7 +3,7 @@ package by.epam.preTraining.krautsou.tasks.task6.code.Palindrome;
 import by.epam.preTraining.krautsou.tasks.task6.code.customStack.CustomException;
 import by.epam.preTraining.krautsou.tasks.task6.code.customStack.CustomStack;
 
-public class PalindromeCheck {
+public class PalindromeChecker {
     public static boolean isPalindrome(String string, CustomStack customStack) throws CustomException {
         string = string.toUpperCase();
         customStack.setCapacity(string.length());
