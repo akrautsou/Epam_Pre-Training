@@ -1,10 +1,10 @@
 package by.epam.preTraining.krautsou.tasks.task6.code;
 
+import by.epam.preTraining.krautsou.tasks.task6.code.Palindrome.PalindromeCheck;
 import by.epam.preTraining.krautsou.tasks.task6.code.customQueue.CustomQueue;
 import by.epam.preTraining.krautsou.tasks.task6.code.viewer.Viewer;
 import by.epam.preTraining.krautsou.tasks.task6.code.customStack.CustomException;
 import by.epam.preTraining.krautsou.tasks.task6.code.customStack.CustomStack;
-import javafx.util.Pair;
 
 public class MainSixthTask {
     private static Viewer viewer = new Viewer();
@@ -33,7 +33,7 @@ public class MainSixthTask {
 
 
     public static void main(String[] args) throws CustomException {
-        viewer.output(PalindromeCheck.isPalindrome("aasdfsaasdfasdfasdfasdfasdfasdfa", customStack));
+        viewer.output(PalindromeCheck.isPalindrome("asddsa", customStack));
         Stack();
         //Queue();
     }
