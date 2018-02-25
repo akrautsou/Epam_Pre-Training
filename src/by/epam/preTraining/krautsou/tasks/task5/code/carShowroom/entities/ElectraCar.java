@@ -16,7 +16,6 @@ public class ElectraCar extends Car {
         this.chargingTime = chargingTime;
     }
 
-
     @Override
     public String toString() {
         return super.toString() + "ElectraCharacteristics " +

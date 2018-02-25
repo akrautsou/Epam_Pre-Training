@@ -34,8 +34,8 @@ public class MainSixthTask {
 
     public static void main(String[] args) throws CustomException {
         viewer.output(PalindromeChecker.isPalindrome("asa", customStack));
-     //   Stack();
-        //Queue();
+        Stack();
+        Queue();
     }
 
     private static void Queue() {

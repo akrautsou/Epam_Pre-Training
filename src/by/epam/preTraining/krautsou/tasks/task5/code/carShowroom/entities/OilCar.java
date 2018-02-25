@@ -5,14 +5,12 @@ import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.Type;
 public class OilCar extends Car {
     private int volumeOfFuelTank;
 
-
     public OilCar(String manufacturer, String model, double price, double engineCapacity, double rating, Type type, boolean rightHand, int volumeOfFuelTank) {
         super(manufacturer, model, price, engineCapacity, rating, type, rightHand);
         this.volumeOfFuelTank = volumeOfFuelTank;
     }
 
     @Override
-
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
