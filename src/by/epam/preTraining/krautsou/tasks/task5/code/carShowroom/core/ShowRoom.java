@@ -3,6 +3,7 @@ package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core;
 import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.Car;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class ShowRoom {
     private String name;
@@ -31,16 +32,15 @@ public class ShowRoom {
         if (o == null || getClass() != o.getClass()) return false;
 
         ShowRoom showRoom = (ShowRoom) o;
-
-        if (!name.equals(showRoom.name)) return false;
-        // Probably incorrect - comparing Object[] arrays with Arrays.equals
-        return Arrays.equals(cars, showRoom.cars);
+        return quantity == showRoom.quantity && (Objects.equals(name, showRoom.name) || (name != null && name.equals(showRoom.getName())))
+                && (Arrays.equals(cars, showRoom.cars));
     }
+
 
     @Override
     public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + Arrays.hashCode(cars);
+        int result = name != null ? name.hashCode() : 0;
+        result = result + (Arrays.hashCode(cars) + quantity) * 5;
         return result;
     }
 

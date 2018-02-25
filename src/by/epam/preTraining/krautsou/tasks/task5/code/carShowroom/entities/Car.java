@@ -11,6 +11,9 @@ public class Car {
     private Type type;
     private boolean rightHand;
 
+    public Car() {
+    }
+
     public Car(String manufacturer, String model, double price, double engineCapacity, double rating, Type type, boolean rightHand) {
         this.manufacturer = manufacturer;
         this.model = model;

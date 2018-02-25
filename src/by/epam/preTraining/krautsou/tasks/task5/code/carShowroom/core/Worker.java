@@ -3,8 +3,7 @@ package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core;
 import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.Car;
 
 import java.util.Objects;
-
-public abstract class WorkClass {
+public  class Worker {
     protected ShowRoom showRoom = new ShowRoom();
 
     public Object output() {

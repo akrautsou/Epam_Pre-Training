@@ -24,7 +24,7 @@ public class OilCar extends Car {
 
     @Override
     public String toString() {
-        return super.toString() +
+        return super.toString() + " OilCharacteristics " +
                 " volumeOfFuelTank=" + volumeOfFuelTank + "\n";
     }
 

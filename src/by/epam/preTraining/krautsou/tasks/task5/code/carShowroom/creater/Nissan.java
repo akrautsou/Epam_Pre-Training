@@ -1,11 +1,22 @@
-package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.manufacturer;
+package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.creater;
 
 import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.ElectraCar;
 import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.OilCar;
 import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.Type;
-import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.WorkClass;
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.Worker;
 
-public class Nissan extends WorkClass {
+public class Nissan extends Worker {
+    private static Nissan instance;
+    private Nissan(){
+
+    }
+    public static Nissan getInstance(){
+
+        if(instance == null){
+            instance = new Nissan();
+        }
+        return instance;
+    }
     public void create() {
         showRoom.addCar(new OilCar("Nissan", "Juke", 750, 175, 3, Type.CROSSOVER, true, 57));
         showRoom.addCar(new OilCar("Nissan", "GT-R", 1500, 300, 4, Type.SPORTSCAR, false, 50));

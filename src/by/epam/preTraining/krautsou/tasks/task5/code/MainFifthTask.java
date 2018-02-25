@@ -1,17 +1,16 @@
 package by.epam.preTraining.krautsou.tasks.task5.code;
 
-import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.manufacturer.Infinity;
-import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.manufacturer.Nissan;
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.creater.Infinity;
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.creater.Nissan;
 import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.viewer.Viewer;
 
 public class MainFifthTask {
 
     public static void main(String[] args) {
         Viewer viewer = new Viewer();
-        Nissan nissan = new Nissan();
-        Infinity infinity = new Infinity();
+        Nissan nissan = Nissan.getInstance();
+        Infinity infinity = Infinity.getInstance();
         nissan.create();
-        //демонстрация функционала
         nissan.editIndex(2);
         viewer.output(nissan.getInfoAboutCollection());
         viewer.output(nissan.output());

@@ -1,11 +1,22 @@
-package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.manufacturer;
+package by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.creater;
 
 import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.ElectraCar;
 import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.OilCar;
 import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.Type;
-import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.WorkClass;
+import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.core.Worker;
 
-public class Infinity extends WorkClass {
+public class Infinity extends Worker {
+    private static Infinity instance;
+    private Infinity(){
+
+    }
+    public static Infinity getInstance(){
+
+        if(instance == null){
+            instance = new Infinity();
+        }
+        return instance;
+    }
     public void create() {
         showRoom.addCar(new OilCar("Infinity", "Q30", 750, 175, 3, Type.HATCHBACK, true,57));
         showRoom.addCar(new OilCar("Infinity", "Q60", 1500, 300, 4, Type.SPORTSCAR, false, 50));
