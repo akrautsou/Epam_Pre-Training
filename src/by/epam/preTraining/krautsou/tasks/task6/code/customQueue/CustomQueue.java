@@ -17,7 +17,7 @@ public class CustomQueue extends List {
     }
 
     public void enqueue(int element) {
-        if (tail == capacity - 1) {  //
+        if (tail == capacity - 1) {
             tail = -1;
         }
         queue[++tail] = element;

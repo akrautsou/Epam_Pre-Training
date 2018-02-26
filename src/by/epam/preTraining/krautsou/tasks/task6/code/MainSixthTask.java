@@ -33,8 +33,8 @@ public class MainSixthTask {
 
 
     public static void main(String[] args) throws CustomException {
-        viewer.output(PalindromeChecker.isPalindrome("asa", customStack));
-        Stack();
+        //viewer.output(PalindromeChecker.isPalindrome("KUULILENNUTEETUNNELILUUK", customStack));
+        //Stack();
         Queue();
     }
 
@@ -46,7 +46,6 @@ public class MainSixthTask {
 
         viewer.output(customQueue.isEmpty());
         viewer.output(customQueue.isFull());
-
         viewer.output(customQueue.peek());
         for (int i = 0; i < customQueue.customSize(); i++) {
             System.out.println(customQueue.getArrayIndex(i));

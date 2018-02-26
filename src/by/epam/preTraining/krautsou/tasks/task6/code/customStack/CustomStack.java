@@ -49,14 +49,6 @@ public class CustomStack {
         this.topElement = topElement;
     }
 
-    /*public void push(Object... element) {
-        for (Object anElement : element) {
-            topElement++;
-            array[topElement] = anElement;
-            numberOfElements++;
-        }
-    }*/
-
     public void push(Object ...element) {
         for (Object anElement : element) {
             if (numberOfElements < capacity) {
