@@ -11,7 +11,7 @@ public class ShowRoom extends Car implements WorkInt {
     private int quantity = 0;
 
     public ShowRoom() {
-    cars = new Car[5];
+        cars = new Car[5];
     }
 
     public ShowRoom(String name, Car[] cars) {
@@ -20,7 +20,8 @@ public class ShowRoom extends Car implements WorkInt {
     }
 
     public ShowRoom(String name) {
-           this.name = name;
+        cars = new Car[5];
+        this.name = name;
     }
 
     private int getQuantity() {

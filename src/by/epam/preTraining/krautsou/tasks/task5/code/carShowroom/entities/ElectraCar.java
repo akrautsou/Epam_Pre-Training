@@ -18,7 +18,7 @@ public class ElectraCar extends Car {
 
     @Override
     public String toString() {
-        return super.toString() + "ElectraCharacteristics " +
+        return super.toString() + " ElectraCharacteristics " +
                 ", lifetime=" + lifetime +
                 ", powerReserve=" + powerReserve +
                 ", batteryCapacity=" + batteryCapacity +

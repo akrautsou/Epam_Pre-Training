@@ -10,13 +10,12 @@ public class Creator {
 
     }
     public static Creator getInstance(){
-
         if(instance == null){
             instance = new Creator();
         }
         return instance;
     }
-   public ElectraCar createElectro(String manufacturer, String model, double price, double engineCapacity, double rating, String type, boolean rightHand, int lifetime, double powerReserve, double batteryCapacity, double chargingTime ) {
+   public ElectraCar createElectra(String manufacturer, String model, double price, double engineCapacity, double rating, String type, boolean rightHand, int lifetime, double powerReserve, double batteryCapacity, double chargingTime ) {
        return new ElectraCar(manufacturer, model, price,engineCapacity, rating,  Type.valueOf(type), rightHand, lifetime, powerReserve, batteryCapacity, chargingTime);
     }
     public OilCar createOil(String manufacturer, String model, double price, double engineCapacity, double rating, String type, boolean rightHand, int volumeOfFuelTank) {
