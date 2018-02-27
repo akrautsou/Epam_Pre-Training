@@ -1,8 +1,10 @@
-package by.epam.preTraining.krautsou.tasks.task6.code.customLinkedList;
+package by.epam.preTraining.krautsou.tasks.task6.code.customCore;
 
-public class LinkList {
+import by.epam.preTraining.krautsou.tasks.task6.code.IList;
 
-    private static class Node{
+public abstract class AbstractLinkList implements IList {
+
+    private static class Node {
 
         private final Object data;
         private Node next;
@@ -21,13 +23,13 @@ public class LinkList {
     private Node first = null;
     private Node last = null;
 
-    public boolean isEmpty() {
-        return (first == null);
+    protected void addFirst(Object data) {
+        Node n = new Node(data);
+        n.next = first;
+        first = n;
     }
 
-    //public boolean isFull() {return last.next == null;}
-
-    public void addLast(Object data) {
+    protected void addLast(Object data) {
         Node n = new Node(data);
         if (isEmpty()) {
             first = n;
@@ -36,10 +38,9 @@ public class LinkList {
         }
         last = n;
         last.next = null;
-
     }
 
-    public Object removeFirst() {
+    protected Object removeFirst() {
         if (first.next == null) {
             last = null;
         }
@@ -48,20 +49,23 @@ public class LinkList {
         return temp;
     }
 
+    @Override
     public Object peek() {
         return first.data;
     }
 
-    public StringBuilder displayList() {
+    @Override
+    public String displayList() {
         StringBuilder result = new StringBuilder();
         Node current = first;
         while (current != null) {
             result.append(current.displayNode());
             current = current.next;
         }
-        return result;
+        return result.toString();
     }
 
+    @Override
     public int getSize() {
         int size = 0;
         Node current = first;
@@ -72,5 +76,14 @@ public class LinkList {
         return size;
     }
 
+    @Override
+    public boolean isEmpty() {
+        return (first == null);
+    }
+
+    @Override
+    public boolean isFull() {
+        return false;
+    }
 
 }
