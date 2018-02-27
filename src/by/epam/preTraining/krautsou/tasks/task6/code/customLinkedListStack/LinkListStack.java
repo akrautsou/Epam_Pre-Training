@@ -6,7 +6,7 @@ public class LinkListStack {
 
     private LinkList1 linkedList = new LinkList1();
 
-    public <T> void push(T data) {
+    public void push(Object data) {
         linkedList.addFirst(data);
     }
 

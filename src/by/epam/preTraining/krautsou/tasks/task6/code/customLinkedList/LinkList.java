@@ -2,12 +2,12 @@ package by.epam.preTraining.krautsou.tasks.task6.code.customLinkedList;
 
 public class LinkList {
 
-    private static class Node<T> {
+    private static class Node{
 
-        private final T data;
+        private final Object data;
         private Node next;
 
-        public Node(T data) {
+        public Node(Object data) {
             this.data = data;
         }
 
@@ -27,7 +27,7 @@ public class LinkList {
 
     //public boolean isFull() {return last.next == null;}
 
-    public <T> void addLast(T data) {
+    public void addLast(Object data) {
         Node n = new Node(data);
         if (isEmpty()) {
             first = n;

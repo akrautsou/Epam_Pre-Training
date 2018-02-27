@@ -1,16 +1,16 @@
 package by.epam.preTraining.krautsou.tasks.task6.code.customLinkedList;
 
-public class LinkList1<T> {
+public class LinkList1 {
+    private Node first = null;
 
-    private static class Node<T> {
+    private static class Node {
 
-        private final T data;
+        private final Object data;
         private Node next;
 
-        public Node(T data) {
+        public Node(Object data) {
             this.data = data;
         }
-
 
         public String displayNode() {
             return (data + " ");
@@ -18,9 +18,7 @@ public class LinkList1<T> {
 
     }
 
-    private Node first = null;
-
-    public void addFirst(T data) {
+    public void addFirst(Object data) {
         Node n = new Node(data);
         n.next = first;
         first = n;
