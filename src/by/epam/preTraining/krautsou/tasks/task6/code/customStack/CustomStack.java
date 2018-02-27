@@ -13,7 +13,7 @@ public class CustomStack {
         array = new Object[inCapacity];
     }
 
-    public void push(Object ...element) {
+    public void push(Object... element) {
         for (Object anElement : element) {
             if (numberOfElements < capacity) {
                 Object[] tempArray = array;
@@ -39,7 +39,7 @@ public class CustomStack {
 
     }
 
-    public int customSize() {
+    public int size() {
         return getCapacity();
     }
 
@@ -47,9 +47,10 @@ public class CustomStack {
         return topElement == (capacity - 1);
     }
 
-    public boolean customIsEmpty() {
+    public boolean isEmpty() {
         return topElement == EMPTY_ELEMENT;
     }
+
 
     public Object peek() throws CustomException {
         if (topElement == EMPTY_ELEMENT) return null;//throw new CustomException("Empty");

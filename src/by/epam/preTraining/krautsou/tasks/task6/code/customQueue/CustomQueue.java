@@ -1,14 +1,12 @@
 package by.epam.preTraining.krautsou.tasks.task6.code.customQueue;
 
-import java.awt.*;
+public class CustomQueue {
 
-public class CustomQueue extends List {
     private int[] queue;
     private int head;
     private int tail;
     private int capacity;
     private int numberOfElem = 0;
-
 
     public CustomQueue(int capacity) {
         this.capacity = capacity;
@@ -34,10 +32,10 @@ public class CustomQueue extends List {
 
     public int dequeue() {
         int temp = queue[head];
-        for(int i = head; i < numberOfElem; i++){
-            queue[i] = queue[i+1];
+        for (int i = head; i < numberOfElem; i++) {
+            queue[i] = queue[i + 1];
         }
-        numberOfElem --;
+        numberOfElem--;
         return temp;
     }
 
@@ -61,35 +59,4 @@ public class CustomQueue extends List {
         return numberOfElem;
     }
 
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    public int[] getQueue() {
-        return queue;
-    }
-
-    public void setQueue(int[] queue) {
-        this.queue = queue;
-    }
-
-    public int getTail() {
-        return tail;
-    }
-
-    public void setTail(int tail) {
-        this.tail = tail;
-    }
-
-    public int getHead() {
-        return head;
-    }
-
-    public void setHead(int head) {
-        this.head = head;
-    }
 }

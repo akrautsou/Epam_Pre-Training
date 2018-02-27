@@ -8,10 +8,10 @@ public class PalindromeChecker {
         string = string.toUpperCase();
         customStack.setCapacity(string.length());
         StringBuilder reversedWord = new StringBuilder();
-        for(int i = 0; i < string.length(); i++){
+        for (int i = 0; i < string.length(); i++) {
             customStack.push(string.charAt(i));
         }
-        for(int i = customStack.getNumberOfElements()-1; i >= 0 ; i--){
+        for (int i = customStack.getNumberOfElements() - 1; i >= 0; i--) {
             reversedWord.append(customStack.getArrayIndex(i));
         }
         return string.equals(reversedWord.toString());
