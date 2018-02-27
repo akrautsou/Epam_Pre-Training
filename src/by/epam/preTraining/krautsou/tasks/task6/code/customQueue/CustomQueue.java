@@ -7,7 +7,8 @@ public class CustomQueue extends List {
     private int head;
     private int tail;
     private int capacity;
-    private int numberOfElem;
+    private int numberOfElem = 0;
+
 
     public CustomQueue(int capacity) {
         this.capacity = capacity;
@@ -20,23 +21,26 @@ public class CustomQueue extends List {
         if (tail == capacity - 1) {
             tail = -1;
         }
-        queue[++tail] = element;
-        numberOfElem++;
-    }
-
-    public void enqueue(int... element) {
-
-    }
-
-    public int dequeue() { //unfinished
-        if (capacity == 0) {
-            head = 0;
+        if (numberOfElem < capacity) {
+            int[] tempArray = queue;
+            queue = new int[++capacity];
+            for (int i = 0; i < tempArray.length; i++) {
+                queue[i] = tempArray[i];
+            }
+            queue[numberOfElem++] = element;
+        } else {
+            queue[numberOfElem++] = element;
         }
-        return 0;
+    }
+
+    public int dequeue() {
+        int temp = queue[numberOfElem - 1];
+        queue[--numberOfElem] = 0;
+        return temp;
     }
 
     public int peek() {
-        return queue[head];
+        return queue[numberOfElem - 1];
     }
 
     public int getArrayIndex(int index) {

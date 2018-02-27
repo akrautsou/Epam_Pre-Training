@@ -13,6 +13,49 @@ public class CustomStack {
         array = new Object[inCapacity];
     }
 
+    public void push(Object ...element) {
+        for (Object anElement : element) {
+            if (numberOfElements < capacity) {
+                Object[] tempArray = array;
+                array = new Object[++capacity];
+                for (int i = 0; i < tempArray.length; i++) {
+                    array[i] = tempArray[i];
+                }
+                array[numberOfElements++] = anElement;
+            } else {
+                array[numberOfElements++] = anElement;
+            }
+            topElement++;
+        }
+    }
+
+    public Object pop() throws CustomException {
+        if (topElement == EMPTY_ELEMENT) return null; //throw new CustomException("Empty");
+        Object temp = array[topElement];
+        array[topElement] = null;
+        numberOfElements--;
+        topElement--;
+        return temp;
+
+    }
+
+    public int customSize() {
+        return getCapacity();
+    }
+
+    public boolean isFull() {
+        return topElement == (capacity - 1);
+    }
+
+    public boolean customIsEmpty() {
+        return topElement == EMPTY_ELEMENT;
+    }
+
+    public Object peek() throws CustomException {
+        if (topElement == EMPTY_ELEMENT) return null;//throw new CustomException("Empty");
+        return array[topElement];
+    }
+
     public int getNumberOfElements() {
         return numberOfElements;
     }
@@ -49,44 +92,5 @@ public class CustomStack {
         this.topElement = topElement;
     }
 
-    public void push(Object ...element) {
-        for (Object anElement : element) {
-            if (numberOfElements < capacity) {
-                Object[] tempArray = array;
-                array = new Object[++capacity];
-                for (int i = 0; i < tempArray.length; i++) {
-                    array[i] = tempArray[i];
-                }
-                array[numberOfElements++] = anElement;
-            } else {
-                array[numberOfElements++] = anElement;
-            }
-            topElement++;
-        }
-    }
-
-    public void pop() throws CustomException {
-        if (topElement == EMPTY_ELEMENT) return; //throw new CustomException("Empty");
-        array[topElement] = null;
-        numberOfElements--;
-        topElement--;
-    }
-
-    public int customSize() {
-        return getCapacity();
-    }
-
-    public boolean isFull() {
-        return topElement == (capacity - 1);
-    }
-
-    public boolean customIsEmpty() {
-        return topElement == EMPTY_ELEMENT;
-    }
-
-    public Object peek() throws CustomException {
-        if (topElement == EMPTY_ELEMENT) return null;//throw new CustomException("Empty");
-        return array[topElement];
-    }
 
 }

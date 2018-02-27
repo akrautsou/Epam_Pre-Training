@@ -1,4 +1,4 @@
-package by.epam.preTraining.krautsou.tasks.task6.code.Palindrome;
+package by.epam.preTraining.krautsou.tasks.task6.code.palindrome;
 
 import by.epam.preTraining.krautsou.tasks.task6.code.customStack.CustomException;
 import by.epam.preTraining.krautsou.tasks.task6.code.customStack.CustomStack;
