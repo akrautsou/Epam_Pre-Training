@@ -1,5 +1,6 @@
 package by.epam.preTraining.krautsou.tasks.task6.code;
 
+import by.epam.preTraining.krautsou.tasks.task6.code.customLinkedListQueue.LinkListQueue;
 import by.epam.preTraining.krautsou.tasks.task6.code.palindrome.PalindromeChecker;
 import by.epam.preTraining.krautsou.tasks.task6.code.customQueue.CustomQueue;
 import by.epam.preTraining.krautsou.tasks.task6.code.viewer.Viewer;
@@ -34,9 +35,22 @@ public class MainSixthTask {
 
 
     public static void main(String[] args) throws CustomException {
-      viewer.output(PalindromeChecker.isPalindrome("KUULILENNUTEETUNNELILUUK", customStack));
-      Stack();
+      //viewer.output(PalindromeChecker.isPalindrome("KUULILENNUTEETUNNELILUUK", customStack));
+      //Stack();
       Queue();
+      //LinkListQueue();
+    }
+
+    private static void LinkListQueue() {
+        LinkListQueue queueImpl = new LinkListQueue();
+        viewer.output(queueImpl.isEmpty());
+        queueImpl.enqueue("A");
+        queueImpl.enqueue("B");
+        queueImpl.enqueue("C");
+        queueImpl.enqueue("D");
+        viewer.output(queueImpl.displayQueue());
+        queueImpl.dequeue();
+        viewer.output(queueImpl.displayQueue());
     }
 
     private static void Queue() {

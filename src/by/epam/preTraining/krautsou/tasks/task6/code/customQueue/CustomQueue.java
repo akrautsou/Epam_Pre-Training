@@ -14,7 +14,6 @@ public class CustomQueue extends List {
         this.capacity = capacity;
         queue = new int[capacity];
         head = 0;
-        tail = -1;
     }
 
     public void enqueue(int element) {
@@ -34,13 +33,16 @@ public class CustomQueue extends List {
     }
 
     public int dequeue() {
-        int temp = queue[numberOfElem - 1];
-        queue[--numberOfElem] = 0;
+        int temp = queue[head];
+        for(int i = head; i < numberOfElem; i++){
+            queue[i] = queue[i+1];
+        }
+        numberOfElem --;
         return temp;
     }
 
     public int peek() {
-        return queue[numberOfElem - 1];
+        return queue[head];
     }
 
     public int getArrayIndex(int index) {
