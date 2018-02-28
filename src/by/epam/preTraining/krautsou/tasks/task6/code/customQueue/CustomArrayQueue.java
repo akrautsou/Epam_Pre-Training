@@ -8,6 +8,7 @@ public class CustomArrayQueue extends AbstractArray implements IQueue {
     public CustomArrayQueue(int capacity) {
         super(capacity);
     }
+
     @Override
     public void enqueue(Object element) {
         if (numberOfElements >= capacity) {
@@ -19,9 +20,11 @@ public class CustomArrayQueue extends AbstractArray implements IQueue {
             array[numberOfElements++] = element;
         }
     }
+
     @Override
     public Object dequeue() {
         Object temp = array[0];
+        if (numberOfElements == 0) return null;
         System.arraycopy(array, 1, array, 0, numberOfElements - 1);
         array[numberOfElements - 1] = null;
         numberOfElements--;

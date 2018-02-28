@@ -12,7 +12,9 @@ public class LinkListStack extends AbstractLinkList implements IStack {
 
     @Override
     public Object pop() {
-        return removeFirst();
+        if (!isEmpty())
+            return removeFirst();
+        return null;
     }
 
 }

@@ -23,7 +23,7 @@ public class CustomArrayStack extends AbstractArray implements IStack {
 
     @Override
     public Object pop() {
-        if (numberOfElements == EMPTY_ELEMENT) return null;
+        if (numberOfElements == 0) return null;
         Object temp = array[numberOfElements - 1];
         array[numberOfElements - 1] = null;
         numberOfElements--;

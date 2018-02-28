@@ -20,6 +20,7 @@ public class MainSixthTask {
 
     private static void linkListQueue() {
         LinkListQueue linkQueue = new LinkListQueue();
+        viewer.output(linkQueue.dequeue());
         linkQueue.enqueue("A");
         linkQueue.enqueue("B");
         linkQueue.enqueue("C");
@@ -33,6 +34,7 @@ public class MainSixthTask {
 
     private static void queue() {
         CustomArrayQueue customArrayQueue = new CustomArrayQueue(1);
+        viewer.output(customArrayQueue.dequeue());
         customArrayQueue.enqueue(10);
         customArrayQueue.enqueue(20);
         customArrayQueue.enqueue(30);
@@ -45,6 +47,7 @@ public class MainSixthTask {
 
     private static void stack() {
         CustomArrayStack customStackQueue = new CustomArrayStack(1);
+        viewer.output(customStackQueue.pop());
         customStackQueue.push(0);
         customStackQueue.push(1);
         customStackQueue.push(2);
@@ -60,6 +63,7 @@ public class MainSixthTask {
 
     private static void linkListStack() {
         LinkListStack st = new LinkListStack();
+        viewer.output(st.pop());
         st.push(75);
         st.push(70);
         st.push(190);

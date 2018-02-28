@@ -13,7 +13,6 @@ public abstract class AbstractLinkList implements IList {
             this.data = data;
         }
 
-
         public String displayNode() {
             return (data + " ");
         }
