@@ -5,7 +5,7 @@ import by.epam.preTraining.krautsou.tasks.task5.code.carShowroom.entities.Car;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class ShowRoom extends Car implements WorkInt {
+public class ShowRoom implements IShowRoom {
     private String name;
     private Car[] cars;
     private int quantity = 0;
@@ -24,11 +24,11 @@ public class ShowRoom extends Car implements WorkInt {
         this.name = name;
     }
 
-    private int getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    private String getName() {
+    public String getName() {
         return name;
     }
 
@@ -36,7 +36,7 @@ public class ShowRoom extends Car implements WorkInt {
         this.name = name;
     }
 
-    private Car[] getCars() {
+    public Car[] getCars() {
         return cars;
     }
 
@@ -68,30 +68,6 @@ public class ShowRoom extends Car implements WorkInt {
         return result;
     }
 
-    public void addCar(ShowRoom showRoom, Car car) {
-        if (Objects.equals(showRoom.getName(), car.getManufacturer())) {
-            if (quantity == cars.length) {
-                Car[] temp = new Car[(cars.length + 5)];
-                System.arraycopy(cars, 0, temp, 0, cars.length);
-                cars = temp;
-            }
-            cars[quantity] = car;
-            quantity++;
-        }
-    }
-
-    public void remove(int index) {
-        if (quantity >= index) {
-            for (int i = index; i < cars.length; i++) {
-                if (i < cars.length - 1) {
-                    cars[i] = cars[i + 1];
-                } else {
-                    cars[i] = null;
-                }
-            }
-        }
-    }
-
     public Object getInfoAboutCollection() {
         return "quantity = " + this.getQuantity() + "\n" +
                 "Collections is empty?" + this.isEmpty();
@@ -103,20 +79,6 @@ public class ShowRoom extends Car implements WorkInt {
 
     public Car outputIndex(int index) {
         return (this.getCars()[index]);
-    }
-
-    public void editIndex(int index) {
-        if (index > this.getQuantity()) {
-            return;
-        }
-        this.getCars()[index].setEngineCapacity(5);
-        this.getCars()[index].setRightHand(false);
-    }
-
-    public void clear() {
-        for (int i = 0; i < this.getQuantity(); i++) {
-            this.getCars()[i] = null;
-        }
     }
 
     public String searchModel(String model) {
@@ -138,5 +100,17 @@ public class ShowRoom extends Car implements WorkInt {
             }
         }
         return result / this.getQuantity();
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public void extendsIfFull(){
+        if (quantity == cars.length) {
+            Car[] temp = new Car[(cars.length + 5)];
+            System.arraycopy(cars, 0, temp, 0, cars.length);
+            cars = temp;
+        }
     }
 }
