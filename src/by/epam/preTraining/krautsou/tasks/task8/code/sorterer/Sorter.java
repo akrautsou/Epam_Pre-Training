@@ -1,5 +1,7 @@
 package by.epam.preTraining.krautsou.tasks.task8.code.sorterer;
 
+import java.util.Arrays;
+
 public class Sorter {
     public static int[] countSort(int[] array) {
         int min, max = min = array[0];
@@ -42,6 +44,22 @@ public class Sorter {
         return array;
     }
 
+    public static int[] selectionSortWithRecursion(int[] array, int n) {
+        if (n == array.length - 1) {
+            return array;
+        }
+        int temp, lowestIndex = n;
+        for (int i = n + 1; i < array.length; i++) {
+            if (array[i] < array[lowestIndex]) {
+                lowestIndex = i;
+            }
+        }
+        temp = array[n];
+        array[n] = array[lowestIndex];
+        array[lowestIndex] = temp;
+        return selectionSortWithRecursion(array, n+1);
+    }
+
     public static int[] bubbleSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
@@ -52,6 +70,19 @@ public class Sorter {
                 }
             }
         }
+        return array;
+    }
+
+    public static int[] bubbleSortWithRecursion(int[] array, int n) {
+        if (n == 1)
+            return null;
+        for (int i = 0; i < n - 1; i++)
+            if (array[i] > array[i + 1]) {
+                int temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
+            }
+        bubbleSortWithRecursion(array, n - 1);
         return array;
     }
 
@@ -67,89 +98,103 @@ public class Sorter {
         return array;
     }
 
-    public static int[] quickSort(int[] array, int low, int high) {
-        int mid = (low + high) / 2;
-        int left = low;
-        int right = high;
-        int pivot = array[mid];
-        while (left <= right) {
-            while (array[left] < pivot)
-                left++;
-            while (array[right] > pivot)
-                right--;
-            if (left <= right) {
-                int temp = array[left];
-                array[left] = array[right];
-                array[right] = temp;
-                left++;
-                right--;
+    public static int[] insertionSortRecursive(int[] array, int n) {
+        if (n <= 1)
+            return null;
+        insertionSortRecursive(array, n - 1);
+        int last = array[n - 1];
+        int j = n - 2;
+        while (j >= 0 && array[j] > last) {
+            array[j + 1] = array[j];
+            j--;
+        }
+        array[j + 1] = last;
+        return array;
+    }
+
+    public static int[] quickSortWithRecursion(int[] array, int start, int end) {
+        if (start >= end)
+            return null;
+        int i = start, j = end;
+        int cur = i - (i - j) / 2;
+        while (i < j) {
+            while (i < cur && (array[i] <= array[cur])) {
+                i++;
             }
+            while (j > cur && (array[cur] <= array[j])) {
+                j--;
+            }
+            if (i < j) {
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+                if (i == cur)
+                    cur = j;
+                else if (j == cur)
+                    cur = i;
+            }
+        }
+        quickSortWithRecursion(array, start, cur);
+        quickSortWithRecursion(array, cur + 1, end);
+        return array;
+    }
+
+    public static int[] mergeSort(int[] array) {
+        int len = array.length;
+        int n = 1;
+        int shift;
+        int twoSize;
+        int[] array2;
+        while (n < len) {
+            shift = 0;
+            while (shift < len) {
+                if (shift + n >= len) break;
+                twoSize = (shift + n * 2 > len) ? (len - (shift + n)) : n;
+                array2 = merge(Arrays.copyOfRange(array, shift, shift + n),
+                        Arrays.copyOfRange(array, shift + n, shift + n + twoSize));
+                for (int i = 0; i < n + twoSize; ++i)
+                    array[shift + i] = array2[i];
+                shift += n * 2;
+            }
+            n *= 2;
         }
         return array;
     }
 
-    public static int[] mergeSort(int[] input) {
-
-        if (input.length == 1) {
-            return input;
-        }
-
-        int middle = (int) Math.ceil((double) input.length / 2);
-        int[] left = new int[middle];
-
-        int rightLength;
-        if (input.length % 2 == 0) {
-            rightLength = middle;
-        } else {
-            rightLength = middle - 1;
-        }
-        int[] right = new int[rightLength];
-
-        int leftIndex = 0;
-        int rightIndex = 0;
-
-        for (int i = 0; i < input.length; i++) {
-            if (i < middle) {
-                left[leftIndex] = input[i];
-                leftIndex++;
-            } else {
-                right[rightIndex] = input[i];
-                rightIndex++;
-            }
-        }
-
-        left = mergeSort(left);
-        right = mergeSort(right);
-
-        return merge(left, right);
+    public static int[] mergeSortWithRecursion(int[] array) {
+        int len = array.length;
+        if (len < 2) return array;
+        int middle = len / 2;
+        return merge(mergeSortWithRecursion(Arrays.copyOfRange(array, 0, middle)),
+                mergeSortWithRecursion(Arrays.copyOfRange(array, middle, len)));
     }
 
-    private static int[] merge(int[] left, int[] right) {
-        int[] result = new int[left.length + right.length];
-        int leftIndex = 0;
-        int rightIndex = 0;
+    private static int[] merge(int[] start, int[] end) {
+        int[] result = new int[start.length + end.length];
+        int startIndex = 0;
+        int endIndex = 0;
         int resultIndex = 0;
 
-        while (leftIndex < left.length || rightIndex < right.length) {
-            if (leftIndex < left.length && rightIndex < right.length) {
-                if (left[leftIndex] < right[rightIndex]) {
-                    result[resultIndex] = left[leftIndex];
-                    leftIndex++;
+        while (startIndex < start.length || endIndex < end.length) {
+            if (startIndex < start.length && endIndex < end.length) {
+                if (start[startIndex] < end[endIndex]) {
+                    result[resultIndex] = start[startIndex];
+                    startIndex++;
                     resultIndex++;
                 } else {
-                    result[resultIndex] = right[rightIndex];
-                    rightIndex++;
+                    result[resultIndex] = end[endIndex];
+                    endIndex++;
                     resultIndex++;
                 }
-            } else if (leftIndex < left.length) {
+            } else if (startIndex < start.length) {
                 for (int i = resultIndex; i < result.length; i++) {
-                    result[i] = left[leftIndex];
-                    leftIndex++;
+                    result[i] = start[startIndex];
+                    startIndex++;
                 }
-            } else if (rightIndex < right.length) {
+            } else if (endIndex < end.length) {
                 for (int i = resultIndex; i < result.length; i++) {
-                    result[i] = right[rightIndex];
-                    rightIndex++;
+                    result[i] = end[endIndex];
+                    endIndex++;
                 }
             }
         }

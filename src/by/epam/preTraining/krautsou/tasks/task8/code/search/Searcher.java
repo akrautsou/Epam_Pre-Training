@@ -1,26 +1,37 @@
 package by.epam.preTraining.krautsou.tasks.task8.code.search;
 
 public class Searcher {
-    public static int[] binarySearch(int[] array, int[] secondArray) { // -1 нет такого значения
-        int[] result = new int[array.length];
+    public static int[] binarySearch(int[] array, int[] arrayB) { // -1 нет такого значения
+        int[] result=new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            int l = 0;
-            int r = array.length - 1;
-            while (l <= r) {
-                int m = (l + r) / 2;
-                if (array[m] == secondArray[m]) {
-                    result[i] = m + 1;
+            int index=-1;
+            int low=0;
+            int high=result.length-1;
+            int mid=high;
+            while(true){
+                if(array[mid]==arrayB[i]){
+                    index=mid;
                     break;
-                } else if (array[m] == secondArray[m]) {
-                    r = m - 1;
-                } else {
-                    l = m + 1;
+                }else if(low==high){
+                    break;
                 }
-                result[i] = -1;
+                mid=(high+low)/2;
+                if(arrayB[i]<array[mid]){
+                    high=mid;
+                }else{
+                    low=mid+1;
+                }
             }
+            if(index>-1){
+                index++;
+            }
+            result[i]=index;
+
         }
+        //!!!!!!!!!!!!!!!!!!!!!!!!!     КОНЕЦ ЗАДАЧИ     !!!!!!!!!!!!!!!!!!!!!!!!!
         return result;
     }
+
 
     public static String linearSearch(int[] array, int value) {
         String result = "Not found";
