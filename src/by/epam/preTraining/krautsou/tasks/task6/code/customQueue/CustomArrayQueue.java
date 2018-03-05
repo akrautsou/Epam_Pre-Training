@@ -11,14 +11,7 @@ public class CustomArrayQueue extends AbstractArray implements IQueue {
 
     @Override
     public void enqueue(Object element) {
-        if (numberOfElements >= capacity) {
-            Object[] tempArray = array;
-            array = new Object[++capacity];
-            System.arraycopy(tempArray, 0, array, 0, tempArray.length);
-            array[numberOfElements++] = element;
-        } else {
-            array[numberOfElements++] = element;
-        }
+        addElement(element);
     }
 
     @Override

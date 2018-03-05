@@ -11,14 +11,7 @@ public class CustomArrayStack extends AbstractArray implements IStack {
 
     @Override
     public void push(Object element) {
-        if (numberOfElements >= capacity) {
-            Object[] tempArray = array;
-            array = new Object[++capacity];
-            System.arraycopy(tempArray, 0, array, 0, tempArray.length);
-            array[numberOfElements++] = element;
-        } else {
-            array[numberOfElements++] = element;
-        }
+        addElement(element);
     }
 
     @Override

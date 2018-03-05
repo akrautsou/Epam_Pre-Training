@@ -3,8 +3,8 @@ package by.epam.preTraining.krautsou.tasks.task6.code.customCore;
 import by.epam.preTraining.krautsou.tasks.task6.code.IList;
 
 public abstract class AbstractArray implements IList {
-    protected static final int EMPTY_ELEMENT = -1;
-    protected int capacity;
+    private static final int EMPTY_ELEMENT = -1;
+    private int capacity;
     protected int numberOfElements = 0;
     protected Object[] array;
 
@@ -32,6 +32,17 @@ public abstract class AbstractArray implements IList {
     public Object peek() {
         if (numberOfElements == EMPTY_ELEMENT) return null;//throw new CustomException("Empty");
         return array[numberOfElements - 1];
+    }
+
+    protected void addElement(Object element) {
+        if (numberOfElements >= capacity) {
+            Object[] tempArray = array;
+            array = new Object[++capacity];
+            System.arraycopy(tempArray, 0, array, 0, tempArray.length);
+            array[numberOfElements++] = element;
+        } else {
+            array[numberOfElements++] = element;
+        }
     }
 
     @Override

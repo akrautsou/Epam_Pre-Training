@@ -46,19 +46,19 @@ public class MainSixthTask {
     }
 
     private static void stack() {
-        CustomArrayStack customStackQueue = new CustomArrayStack(1);
-        viewer.output(customStackQueue.pop());
-        customStackQueue.push(0);
-        customStackQueue.push(1);
-        customStackQueue.push(2);
-        customStackQueue.push(3);
-        viewer.output(customStackQueue.displayList());
-        viewer.output(customStackQueue.peek());
-        viewer.output(customStackQueue.getSize());
-        viewer.output(customStackQueue.isFull());
-        viewer.output(customStackQueue.isEmpty());
-        viewer.output(customStackQueue.pop());
-        viewer.output(customStackQueue.displayList());
+        CustomArrayStack customArrayStack = new CustomArrayStack(1);
+        viewer.output(customArrayStack.pop());
+        customArrayStack.push(0);
+        customArrayStack.push(1);
+        customArrayStack.push(2);
+        customArrayStack.push(3);
+        viewer.output(customArrayStack.displayList());
+        viewer.output(customArrayStack.peek());
+        viewer.output(customArrayStack.getSize());
+        viewer.output(customArrayStack.isFull());
+        viewer.output(customArrayStack.isEmpty());
+        viewer.output(customArrayStack.pop());
+        viewer.output(customArrayStack.displayList());
     }
 
     private static void linkListStack() {
