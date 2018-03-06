@@ -1,10 +1,8 @@
 package by.epam.preTraining.krautsou.tasks.task9.Task;
 
-import by.epam.preTraining.krautsou.tasks.task3.code.viewer.View;
 import by.epam.preTraining.krautsou.tasks.task9.Files.Reader;
 import by.epam.preTraining.krautsou.tasks.task9.Parser.ParserSentenceToArrayWords;
 import by.epam.preTraining.krautsou.tasks.task9.viewer.Viewer;
-import com.sun.corba.se.spi.ior.IdentifiableContainerBase;
 
 import java.io.IOException;
 import java.util.*;
@@ -17,8 +15,8 @@ public class Ten {
                 "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\Files\\File");
         String words = Reader.reader("c:\\Users\\Drico\\Documents\\IdeaProjects\\epam\\Epam_Pre-Training\\src" +
                 "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\Files\\Words");
-        String[] wordsArray = ParserSentenceToArrayWords.parser(words);
-        String[] txt = ParserSentenceToArrayWords.parser(string);
+        String[] wordsArray = ParserSentenceToArrayWords.parse(words);
+        String[] txt = ParserSentenceToArrayWords.parse(string);
         int[] quantity = new int[wordsArray.length];
 
         for (String aTxt : txt) {
@@ -30,9 +28,8 @@ public class Ten {
         }
         bubbleSort(quantity, wordsArray);
         for (int g = 0; g < wordsArray.length; g++) {
-            Viewer.output(wordsArray[g] + " " + quantity[g]);
+            Viewer.output("\n" + wordsArray[g] + " " + quantity[g]);
         }
-        Viewer.output("\n");
     }
 
     public void start2() throws IOException { //HashMap
@@ -40,8 +37,8 @@ public class Ten {
                 "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\Files\\File");
         String words = Reader.reader("c:\\Users\\Drico\\Documents\\IdeaProjects\\epam\\Epam_Pre-Training\\src" +
                 "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\Files\\Words");
-        String[] wordsArray = ParserSentenceToArrayWords.parser(words);
-        String[] txt = ParserSentenceToArrayWords.parser(string);
+        String[] wordsArray = ParserSentenceToArrayWords.parse(words);
+        String[] txt = ParserSentenceToArrayWords.parse(string);
         Map<String, Integer> map = new HashMap<>();
         for (String aTxt : txt) {
             for (String aWordsArray : wordsArray) {
@@ -62,7 +59,7 @@ public class Ten {
                     }
                 });
         for (Map.Entry<String, Integer> entry : list) {
-            Viewer.output(entry.getKey(), entry.getValue());
+            Viewer.output("\n" + entry.getKey(), entry.getValue());
         }
     }
 
