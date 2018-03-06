@@ -1,4 +1,4 @@
-package by.epam.preTraining.krautsou.tasks.task9.Parser;
+package by.epam.preTraining.krautsou.tasks.task9.parser;
 
 import java.util.Arrays;
 import java.util.Objects;

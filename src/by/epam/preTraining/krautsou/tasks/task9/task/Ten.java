@@ -1,7 +1,7 @@
-package by.epam.preTraining.krautsou.tasks.task9.Task;
+package by.epam.preTraining.krautsou.tasks.task9.task;
 
-import by.epam.preTraining.krautsou.tasks.task9.Files.Reader;
-import by.epam.preTraining.krautsou.tasks.task9.Parser.ParserSentenceToArrayWords;
+import by.epam.preTraining.krautsou.tasks.task9.files.Reader;
+import by.epam.preTraining.krautsou.tasks.task9.parser.ParserSentenceToArrayWords;
 import by.epam.preTraining.krautsou.tasks.task9.viewer.Viewer;
 
 import java.io.IOException;
@@ -12,9 +12,9 @@ import java.util.*;
 public class Ten {
     public void start() throws IOException { // Array
         String string = Reader.reader("c:\\Users\\Drico\\Documents\\IdeaProjects\\epam\\Epam_Pre-Training\\src" +
-                "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\Files\\File");
+                "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\files\\File");
         String words = Reader.reader("c:\\Users\\Drico\\Documents\\IdeaProjects\\epam\\Epam_Pre-Training\\src" +
-                "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\Files\\Words");
+                "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\files\\Words");
         String[] wordsArray = ParserSentenceToArrayWords.parse(words);
         String[] txt = ParserSentenceToArrayWords.parse(string);
         int[] quantity = new int[wordsArray.length];
@@ -34,9 +34,9 @@ public class Ten {
 
     public void start2() throws IOException { //HashMap
         String string = Reader.reader("c:\\Users\\Drico\\Documents\\IdeaProjects\\epam\\Epam_Pre-Training\\src" +
-                "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\Files\\File");
+                "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\files\\File");
         String words = Reader.reader("c:\\Users\\Drico\\Documents\\IdeaProjects\\epam\\Epam_Pre-Training\\src" +
-                "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\Files\\Words");
+                "\\by\\epam\\preTraining\\krautsou\\tasks\\task9\\files\\Words");
         String[] wordsArray = ParserSentenceToArrayWords.parse(words);
         String[] txt = ParserSentenceToArrayWords.parse(string);
         Map<String, Integer> map = new HashMap<>();

@@ -1,4 +1,4 @@
-package by.epam.preTraining.krautsou.tasks.task9.Files;
+package by.epam.preTraining.krautsou.tasks.task9.files;
 
 import java.io.File;
 import java.io.FileNotFoundException;

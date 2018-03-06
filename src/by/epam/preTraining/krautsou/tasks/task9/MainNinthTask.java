@@ -1,8 +1,7 @@
 package by.epam.preTraining.krautsou.tasks.task9;
 
-import by.epam.preTraining.krautsou.tasks.task9.Task.Five;
-import by.epam.preTraining.krautsou.tasks.task9.Task.Ten;
-import com.sun.org.apache.xpath.internal.SourceTree;
+import by.epam.preTraining.krautsou.tasks.task9.task.Five;
+import by.epam.preTraining.krautsou.tasks.task9.task.Ten;
 
 import java.io.IOException;
 

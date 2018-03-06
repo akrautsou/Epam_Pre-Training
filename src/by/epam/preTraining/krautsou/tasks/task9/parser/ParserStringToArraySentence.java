@@ -1,4 +1,4 @@
-package by.epam.preTraining.krautsou.tasks.task9.Parser;
+package by.epam.preTraining.krautsou.tasks.task9.parser;
 
 public abstract class ParserStringToArraySentence {
 
