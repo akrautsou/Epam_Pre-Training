@@ -28,7 +28,7 @@ public class Sorter {
         }
         return array;
     }
-
+    //O(N*N)
     public static int[] selectionSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int min = i;
@@ -59,7 +59,7 @@ public class Sorter {
         array[lowestIndex] = temp;
         return selectionSortWithRecursion(array, n+1);
     }
-
+    //O(N)or O(N*N)
     public static int[] bubbleSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
@@ -85,7 +85,7 @@ public class Sorter {
         bubbleSortWithRecursion(array, n - 1);
         return array;
     }
-
+    //O(N)or O(N*N)
     public static int[] insertionSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int n = array[i];
@@ -111,34 +111,7 @@ public class Sorter {
         array[j + 1] = last;
         return array;
     }
-
-    public static int[] quickSortWithRecursion(int[] array, int start, int end) {
-        if (start >= end)
-            return null;
-        int i = start, j = end;
-        int cur = i - (i - j) / 2;
-        while (i < j) {
-            while (i < cur && (array[i] <= array[cur])) {
-                i++;
-            }
-            while (j > cur && (array[cur] <= array[j])) {
-                j--;
-            }
-            if (i < j) {
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-                if (i == cur)
-                    cur = j;
-                else if (j == cur)
-                    cur = i;
-            }
-        }
-        quickSortWithRecursion(array, start, cur);
-        quickSortWithRecursion(array, cur + 1, end);
-        return array;
-    }
-
+    //O(Nlog(n))
     public static int[] mergeSort(int[] array) {
         int len = array.length;
         int n = 1;
@@ -167,6 +140,33 @@ public class Sorter {
         int middle = len / 2;
         return merge(mergeSortWithRecursion(Arrays.copyOfRange(array, 0, middle)),
                 mergeSortWithRecursion(Arrays.copyOfRange(array, middle, len)));
+    }
+    //O(Nlog(n))
+    public static int[] quickSortWithRecursion(int[] array, int start, int end) {
+        if (start >= end)
+            return null;
+        int i = start, j = end;
+        int cur = i - (i - j) / 2;
+        while (i < j) {
+            while (i < cur && (array[i] <= array[cur])) {
+                i++;
+            }
+            while (j > cur && (array[cur] <= array[j])) {
+                j--;
+            }
+            if (i < j) {
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+                if (i == cur)
+                    cur = j;
+                else if (j == cur)
+                    cur = i;
+            }
+        }
+        quickSortWithRecursion(array, start, cur);
+        quickSortWithRecursion(array, cur + 1, end);
+        return array;
     }
 
     private static int[] merge(int[] start, int[] end) {

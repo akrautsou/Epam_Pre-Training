@@ -1,6 +1,7 @@
 package by.epam.preTraining.krautsou.tasks.task8.code.search;
 
 public class Searcher {
+    //O(N*N)
     public static int[] binarySearch(int[] array, int[] arrayB) { // -1 нет такого значения
         int[] result=new int[array.length];
         for (int i = 0; i < array.length; i++) {
@@ -31,8 +32,7 @@ public class Searcher {
         //!!!!!!!!!!!!!!!!!!!!!!!!!     КОНЕЦ ЗАДАЧИ     !!!!!!!!!!!!!!!!!!!!!!!!!
         return result;
     }
-
-
+    //O(N)
     public static String linearSearch(int[] array, int value) {
         String result = "Not found";
         for (int x : array) {
